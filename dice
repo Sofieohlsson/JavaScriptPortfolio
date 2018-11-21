@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Kasta tärning!</h1>
+<p>Antal på 1000 kast:</p>
+<p>&#9856;</p>
+<p>&#9857;</p>
+<p>&#9858;</p>
+<p>&#9859;</p>
+<p>&#9860;</p>
+<p>&#9861;</p>
+
+    <script>
+        function randomDice(){
+    let randomArray = [];
+    for(let i = 0; i < 1000; i++){
+        randomArray.push(Math.floor((Math.random() *6) +1)); 
+    }
+    return randomArray;
+}
+
+function print(){
+    let randomArray = randomDice(); 
+    let one   = 0; 
+    let two   = 0; 
+    let three = 0; 
+    let four  = 0; 
+    let five  = 0; 
+    let six   = 0; 
+    
+    for (let i = 0; i < 1000; i++){
+        switch(randomArray[i]){
+            case 1: one   += 1; break; 
+            case 2: two   += 1; break; 
+            case 3: three += 1; break; 
+            case 4: four  += 1; break; 
+            case 5: five  += 1; break; 
+            case 6: six   += 1; break; 
+        }
+    }
+
+    let elDies = document.getElementsByTagName("p"); 
+    elDies[1].innerHTML += " " + one; 
+    elDies[2].innerHTML += " " + two; 
+    elDies[3].innerHTML += " " + three; 
+    elDies[4].innerHTML += " " + four; 
+    elDies[5].innerHTML += " " + five; 
+    elDies[6].innerHTML += " " + six; 
+    
+}
+print(); 
+    
+    </script>
+</body>
+</html>
