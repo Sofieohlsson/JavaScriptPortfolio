@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Övning slide 15 övningar 1</title>
+</head>
+<body>
+    <script>
+        let minutes = +prompt("Ange antal minuter: "); 
+        function omvandling(minutes){
+            let hours = minutes / 60; 
+            let min = minutes % 60; 
+            alert("Dina minuter är " + Math.round(hours) + " timmar och " + min + " minuter"); 
+        }
+
+        omvandling(minutes); 
+    </script>
+</body>
+</html>
